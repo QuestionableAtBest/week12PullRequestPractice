@@ -6,6 +6,7 @@ function hello() {
 
 function pinkbg() {
     document.body.classList.toggle("pinkbg")
+    updateImage();
 }
 
 function changeText() {
@@ -15,6 +16,14 @@ function changeText() {
         buttonRef.textContent = "Click Me!";
     }
 }
-buttonRef.addEventListener("click", hello)
-buttonRef.addEventListener("click", pinkbg)
-buttonRef.addEventListener("click", changeText)
+
+function updateImage(){
+    const img = document.querySelector("#shoppingCart");
+    img.setAttribute("src","./images/shopping.png");
+    img.setAttribute("alt","Clipart of shopping cart");
+    img.setAttribute("height",50)
+    img.setAttribute("width",50)
+}
+buttonRef.addEventListener("click", hello);
+buttonRef.addEventListener("click", pinkbg);
+buttonRef.addEventListener("click", changeText);
